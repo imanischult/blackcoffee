@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://imanischult.github.io/blackcoffee",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "mongoose": "^5.6.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
@@ -30,5 +32,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imanischult/blackcoffee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imanischult/blackcoffee/issues"
   }
 }
