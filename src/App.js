@@ -8,6 +8,10 @@ function App() {
   return (
     <div>
       <Searchbar />
+      <div className="App">
+        <header className="App-header" />
+        <Router />
+      </div>
     </div>
   );
 }
