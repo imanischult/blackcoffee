@@ -1,12 +1,18 @@
 import React from "react";
 import "./App.css";
+import Searchbar from "./components/Searchbar/Searchbar";
+import Router from "./Router";
+import "./App.css";
+// import { Button } from "@material-ui/core";
 
 function App() {
   return (
-    <div className="App">
-      <IntroInfo />
-      <header className="App-header" />
-      <Router />
+    <div>
+      <Searchbar />
+      <div className="App">
+        <header className="App-header" />
+        <Router />
+      </div>
     </div>
   );
 }
