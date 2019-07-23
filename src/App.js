@@ -1,8 +1,8 @@
 import React from "react";
+import "./App.css";
 import Searchbar from "./components/Searchbar/Searchbar";
 import Router from "./Router";
 import "./App.css";
-
 // import { Button } from "@material-ui/core";
 
 function App() {
