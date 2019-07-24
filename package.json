@@ -4,10 +4,12 @@
   "private": true,
   "homepage": "https://imanischult.github.io/blackcoffee",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "mongoose": "^5.6.5",
+    "@material-ui/core": "^4.2.1",
+    "autosuggest-highlight": "^3.1.1",
     "react": "^16.8.6",
+    "react-autosuggest": "^9.4.3",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1"
   },
   "scripts": {
