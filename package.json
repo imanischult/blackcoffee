@@ -9,10 +9,6 @@
     "react": "^16.8.6",
     "react-autosuggest": "^9.4.3",
     "react-dom": "^16.8.6",
-<<<<<<< HEAD
-    "react-router": "^5.0.1",
-=======
->>>>>>> f789a2bed2fa3ae2e441b015c0175c3d06a4ac77
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1"
   },
