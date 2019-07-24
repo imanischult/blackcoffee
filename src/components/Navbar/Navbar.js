@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./Navbar.css";
 import { makeStyles } from "@material-ui/core/styles";
 //including for convienience
 
