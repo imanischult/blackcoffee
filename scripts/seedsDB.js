@@ -19,8 +19,8 @@ const bCoffee = [
     Address: "2315 Cascade Rd SW, Atlanta, GA 30311",
     Description:
       "BUZZ will be a premier stop for art, culture, and community. We will feature premium coffee from Stumptown Coffee Roasters as well as Old World and New World Wines in an art filled setting.",
-      Area: "South Atlanta", 
-      CoffeeBrand: "Stumptown Coffee Roasters"    
+    Area: "South Atlanta", 
+    CoffeeBrand: "Stumptown Coffee Roasters"    
   },
   {
     Name: "Just Add Honey Tea Company",
