@@ -1,3 +1,3 @@
 module.exports = {
-    BCoffee: require("./coffee")
+    coffeeShop: require("./coffee")
 };
