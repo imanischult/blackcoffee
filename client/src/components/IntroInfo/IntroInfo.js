@@ -3,7 +3,7 @@ import "./IntroInfo.css";
 
 function IntroInfo() {
   return (
-    <div>
+    <div id="intro">
       <h1>Welcome to BLACK</h1>
       <br />
       <p>
@@ -19,6 +19,8 @@ function IntroInfo() {
         name, location, or coffee type.
       </p>
     </div>
+
+
   );
 }
 
