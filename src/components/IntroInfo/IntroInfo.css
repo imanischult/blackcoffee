@@ -1,0 +1,7 @@
+.App-header {
+    background-image: url('/images/coffee.jpg');
+    height: 600px;
+    width: 100vw;
+    background-attachment: fixed;
+    background-size: cover;
+}
