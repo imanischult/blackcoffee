@@ -10,7 +10,7 @@ export default () => {
       <h1>ATL Black Bean</h1>
 
       <a href="/">Home</a>
-      <a href="/Review">Add a Review</a>
+      <a href="/Reviews">Reviews</a>
     </div>
   )
 }
