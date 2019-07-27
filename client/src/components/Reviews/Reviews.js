@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class Reviews extends Component {
     state = {
-        selectedShop: "",
-        currentReview: "",
-        currentName: "",
+        shop: "",
+        reviewbody: "",
+        reviewer: "",
         reviewResults: []
 
     }
@@ -31,24 +31,24 @@ class Reviews extends Component {
             <div>
                 <form className="form-group" name="reviewForm">
                     <label>Choose a Coffee Shop
-                    <input
-                            type="dropdown" name="shop-name"
-                            value={this.state.selectedShop}
-                            onChange={this.handleInputChange} >
-                        </input>
+                    <select
+                            type="dropdown" 
+                            name="shop"
+                            defaultValue="choose a coffee shop">
+                        </select>
                     </label>
                     <br />
-                    <label for="review-body">Write your review here
-                        <textarea name="review-body"
-                            value={this.state.currentReview}
+                    <label>Write your review here
+                        <textarea name="reviewbody"
+                            value={this.state.reviewbody}
                             onChange={this.handleInputChange}
                         >
                         </textarea>
                     </label>
                     <br />
-                    <label for="reviewer-name">Your Name
-                        <input type="text" name="reviewer-name"
-                            value={this.state.currentName}
+                    <label>Your Name 
+                        <input type="text" name="reviewer"
+                            value={this.state.reviewer}
                             onChange={this.handleInputChange}
                         >
                         </input>
