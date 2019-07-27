@@ -6,44 +6,25 @@ import parse from "autosuggest-highlight/parse";
 import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
 import MenuItem from "@material-ui/core/MenuItem";
-import Popper from "@material-ui/core/Popper";
 import { makeStyles } from "@material-ui/core/styles";
 
 const suggestions = [
-  { label: "Afghanistan" },
-  { label: "Aland Islands" },
-  { label: "Albania" },
-  { label: "Algeria" },
-  { label: "American Samoa" },
-  { label: "Andorra" },
-  { label: "Angola" },
-  { label: "Anguilla" },
-  { label: "Antarctica" },
-  { label: "Antigua and Barbuda" },
-  { label: "Argentina" },
-  { label: "Armenia" },
-  { label: "Aruba" },
-  { label: "Australia" },
-  { label: "Austria" },
-  { label: "Azerbaijan" },
-  { label: "Bahamas" },
-  { label: "Bahrain" },
-  { label: "Bangladesh" },
-  { label: "Barbados" },
-  { label: "Belarus" },
-  { label: "Belgium" },
-  { label: "Belize" },
-  { label: "Benin" },
-  { label: "Bermuda" },
-  { label: "Bhutan" },
-  { label: "Bolivia, Plurinational State of" },
-  { label: "Bonaire, Sint Eustatius and Saba" },
-  { label: "Bosnia and Herzegovina" },
-  { label: "Botswana" },
-  { label: "Bouvet Island" },
-  { label: "Brazil" },
-  { label: "British Indian Ocean Territory" },
-  { label: "Brunei Darussalam" }
+  { label: "Midtown" },
+  { label: "Buckhead" },
+  { label: "Atlanta" },
+  { label: "Dark Roast Whole Bean" },
+  { label: "Colombia Whole Bean" },
+  { label: "Robusta Bean" },
+  { label: "Glenwood" },
+  { label: "Edgewood" },
+  { label: "Stumptown Coffee Roasters" },
+  { label: "Kuntz Coffee" },
+  { label: "BUZZ Coffee & Winehouse" },
+  { label: "Just Add Honey Tea Company" },
+  { label: "Urban Grind" },
+  { label: "West Atlanta" },
+  { label: "East Atlanta" },
+  { label: "South Atlanta" }
 ];
 
 function renderInputComponent(inputProps) {
@@ -121,7 +102,7 @@ const useStyles = makeStyles(theme => ({
   suggestionsContainerOpen: {
     position: "absolute",
     zIndex: 1,
-    marginTop: theme.spacing(1),
+    // marginTop: theme.spacing(1),
     left: 0,
     right: 0
   },
@@ -195,39 +176,6 @@ export default function IntegrationAutosuggest() {
           <Paper {...options.containerProps} square>
             {options.children}
           </Paper>
-        )}
-      />
-      <div className={classes.divider} />
-      <Autosuggest
-        {...autosuggestProps}
-        inputProps={{
-          classes,
-          id: "react-autosuggest-popper",
-          label: "Country",
-          placeholder: "With Popper",
-          value: state.popper,
-          onChange: handleChange("popper"),
-          inputRef: node => {
-            setAnchorEl(node);
-          },
-          InputLabelProps: {
-            shrink: true
-          }
-        }}
-        theme={{
-          suggestionsList: classes.suggestionsList,
-          suggestion: classes.suggestion
-        }}
-        renderSuggestionsContainer={options => (
-          <Popper anchorEl={anchorEl} open={Boolean(options.children)}>
-            <Paper
-              square
-              {...options.containerProps}
-              style={{ width: anchorEl ? anchorEl.clientWidth : undefined }}
-            >
-              {options.children}
-            </Paper>
-          </Popper>
         )}
       />
     </div>
