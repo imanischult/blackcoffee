@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const reviewsSchema = new Schema({
-  coffeeShopName: { type: String, required: true },
+  coffeeShopId: { type: Schema.Types.ObjectId, required: true },
   user_name: { type: String, required: true },
-  review_text: String,
+  review_text: { type: String, required: true },
   date: { type: Date, default: Date.now }
 });
 

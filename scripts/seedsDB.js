@@ -1,12 +1,15 @@
 const mongoose = require("mongoose");
+const faker = require("faker"); // faker is used to insert fake data https://github.com/marak/Faker.js/
 const db = require("../models");
 
-// mongoose.connect(
-//   process.env.MONGODB_URI ||
-//   "mongodb://localhost/BlackCoffee"
-// );
+async function asyncForEach(array, callback) {
+  console.log("looping over", array.length, " items.");
+  for (let index = 0; index < array.length; index++) {
+    await callback(array[index], index, array);
+  }
+}
 
-const coffeeShop = [
+const coffeeShops = [
   {
     Name: "Urban Grind",
     Address: "962 Marietta St NW, Atlanta, GA 30318",
@@ -33,37 +36,61 @@ const coffeeShop = [
   }
 ];
 
-const reviews = [{}];
+async function main() {
+  let createdShops;
 
-try {
-  mongoose.connect(
-    "mongodb://heroku_h05lv8xk:pk9qsmle95olhbmcn2a4vgvov5@ds261072.mlab.com:61072/heroku_h05lv8xk",
-    { useNewUrlParser: true }
-  );
+  try {
+    await mongoose.connect(
+      "mongodb://heroku_h05lv8xk:pk9qsmle95olhbmcn2a4vgvov5@ds261072.mlab.com:61072/heroku_h05lv8xk",
+      { useNewUrlParser: true }
+    );
+    console.log("Connected to mongodb");
+  } catch (error) {
+    console.log("there was an error connecting to mongodb");
+    console.log(error);
+    process.exit(1);
+  }
 
-  db.coffeeShop
-    .deleteMany({})
-    .then(() => db.coffeeShop.collection.insertMany(coffeeShop))
-    .then(data => {
-      console.log(data.result.n + " records inserted!");
-      process.exit(0);
-    })
-    .catch(err => {
-      console.error(err);
-      process.exit(1);
+  try {
+    await db.coffeeShop.deleteMany({});
+    console.log("deleted existing coffee shops");
+  } catch (error) {
+    console.log("error deleting coffeeshops");
+    console.log(error);
+    process.exit(1);
+  }
+
+  try {
+    createdShops = await db.coffeeShop.collection.insertMany(coffeeShops);
+    console.log("Shops have been created");
+  } catch (error) {
+    console.log("error inserting coffeeshops");
+    console.log(error);
+    process.exit(1);
+  }
+
+  try {
+    await db.reviews.deleteMany({});
+  } catch (error) {
+    console.log("error deleting existing reviews");
+    console.log(error);
+    process.exit(1);
+  }
+
+  try {
+    await asyncForEach(createdShops.ops, async shop => {
+      const review = await db.reviews.create({
+        coffeeShopId: shop._id,
+        user_name: faker.name.findName(),
+        review_text: faker.lorem.paragraph()
+      });
     });
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
 
-  db.reviews
-    .deleteMany({})
-    .then(() => db.reviews.collection.insertMany(reviews))
-    .then(data => {
-      console.log(data.result.n + " records inserted!");
-      process.exit(0);
-    })
-    .catch(err => {
-      console.error(err);
-      process.exit(1);
-    });
-} catch (err) {
-  console.log("there was an error connecting", err);
+  process.exit(0);
 }
+
+main();
