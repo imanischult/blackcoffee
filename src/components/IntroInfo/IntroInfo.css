@@ -9,3 +9,7 @@
 h1 {
     text-align: center;
 }
+
+#root {
+    position: relative;
+}

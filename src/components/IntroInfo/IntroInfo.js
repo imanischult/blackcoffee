@@ -3,8 +3,8 @@ import "./IntroInfo.css";
 
 function IntroInfo() {
   return (
-    <div>
-      <h1>Welcome to BLACK</h1>
+    <div id="root">
+      <h1>Welcome to Black Bean</h1>
       <br />
       <p>
         Here in Atlanta, we pride ourselves on the diverse culture that the
