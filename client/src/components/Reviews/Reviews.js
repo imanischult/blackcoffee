@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Reviews extends Component {
     state = {
-        shop: "",
+        shop: "choose a coffee shop",
         reviewbody: "",
         reviewer: "",
         reviewResults: []
@@ -32,9 +32,9 @@ class Reviews extends Component {
                 <form className="form-group" name="reviewForm">
                     <label>Choose a Coffee Shop
                     <select
-                            type="dropdown" 
                             name="shop"
-                            defaultValue="choose a coffee shop">
+                            defaultValue="choose a coffee shop"
+                            onChange={this.handleInputChange}>
                         </select>
                     </label>
                     <br />
