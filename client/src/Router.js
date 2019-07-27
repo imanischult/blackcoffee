@@ -11,6 +11,7 @@ class Router extends Component {
           <Switch>
             <Route exact path='/' component={HomePage}/>
             <Route path='/index' component={HomePage}/>
+            <Route path='/reviews' component={Reviews}/>
             <Route path='*' component={HomePage}/>
           </Switch>
         </div>
