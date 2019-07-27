@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Router from "./Router";
-//import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 // import { Button } from "@material-ui/core";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <div className="App-header">
       
       </div>
+      <Navbar />
       <div className="App">
         <Router />
       </div>
