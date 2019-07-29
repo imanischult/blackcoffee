@@ -5,7 +5,7 @@ router.get('/coffee', function(req, res) {
     models.coffeeShop.create({
         name: 'Best cofvefe ever!',
         address: "123 Main st",
-        description: "Best infuraiting coffee ever"
+        description: "Best infuriating coffee ever"
     })
    res.sendStatus(200)
 });
