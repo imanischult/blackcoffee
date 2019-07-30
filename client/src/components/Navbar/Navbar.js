@@ -1,4 +1,5 @@
 import React from "react";
+// replaces <a> tag with react's Link to prevent the page from refreshing
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 //including for convienience
