@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import router from "../../../../routes/api/coffee"; 
 
 class Reviews extends Component {
     state = {
@@ -11,7 +12,7 @@ class Reviews extends Component {
     }
 
     componentDidMount() {
-        fetch("/api/coffee/") //fetch from our API route for getting the names of all the coffee shops in the db.
+        fetch("/coffee") //fetch from our API route for getting the names of all the coffee shops in the db.
             .then((response) => {
                 return response.json();
             })
