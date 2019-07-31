@@ -49,7 +49,6 @@ class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <nav>temp navbar</nav>
         <IntroInfo />
         <form onSubmit={this.loadCoffeeshops}>
           <input
