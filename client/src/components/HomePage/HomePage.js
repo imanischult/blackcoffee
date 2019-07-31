@@ -57,7 +57,7 @@ class HomePage extends React.Component {
             value={this.state.search}
             onChange={this.handleInputChange}
           />
-          <button type="submit">Search Local Coffeeshops</button>
+          <Button type="submit">Search Local Coffeeshops</Button>
         </form>
 
         {this.state.coffeeshops.map(shop => (
