@@ -1,3 +1,20 @@
 .navbar {
-    border: 1px solid black;
+  height: 80;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  padding-left: 1050px;
+  padding-right: 30px;
+}
+
+#home {
+    color: antiquewhite;
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 20pt;
+}
+
+#review {
+    color: antiquewhite;
+    font-family: "Cabin Sketch", sans-serif;
+    font-size: 20pt;
 }
