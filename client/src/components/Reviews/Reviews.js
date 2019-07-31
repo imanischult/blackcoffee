@@ -11,7 +11,7 @@ class Reviews extends Component {
     }
 
     componentDidMount() {
-        fetch("") //fetch from our API route for getting the names of all the coffee shops in the db.
+        fetch("/api/coffee/") //fetch from our API route for getting the names of all the coffee shops in the db.
             .then((response) => {
                 return response.json();
             })
