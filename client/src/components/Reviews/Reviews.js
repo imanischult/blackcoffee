@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import router from "../../../../routes/api/coffee"; 
+import API from '../../utils/API';
+
 
 class Reviews extends Component {
     state = {
@@ -12,7 +13,7 @@ class Reviews extends Component {
     }
 
     componentDidMount() {
-        fetch("/coffee") //fetch from our API route for getting the names of all the coffee shops in the db.
+        API.getCoffeeShop()
             .then((response) => {
                 return response.json();
             })
