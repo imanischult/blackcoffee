@@ -10,11 +10,11 @@ export default {
     return axios.get("/api/coffee/" + id);
   },
   getAllReviews: function() {
-    return axios.get("/api/coffee/");
+    return axios.get("/api/reviews");
   },
 
   getShopReviews: function(name) {
-    return axios.get(`/api/coffee/${name}`)
+    return axios.get(`/api/reviews/${name}`)
   }
 
 };

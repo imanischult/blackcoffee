@@ -3,6 +3,7 @@ const db = require("../models")
 // Defining methods for the coffeeShopsController
 module.exports = {
     findAll: function(req, res) {
+      console.log("searching... " + req);
       db.coffeeShop
         .find(req.query)
         .sort({ date: -1 })
