@@ -14,8 +14,8 @@ document.head.appendChild(link);
 export default () => {
   return (
     <div className="navbar ">
-      <a id="home" href="/">Home</a>
-      <a id="review" href="/Reviews">Reviews</a>
+      <Link id="home" to="/">Home </Link>
+      <Link id="review" to="/Reviews">Reviews </Link>
     </div>
   );
 };
