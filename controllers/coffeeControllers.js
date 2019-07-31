@@ -5,14 +5,15 @@ module.exports = {
     findAll: function(req, res) {
       console.log("searching... " + req);
       db.coffeeShop
-        .find(req.query)
-        .sort({ date: -1 })
+        .find({})
+        .sort({ name: -1 })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    findById: function(req, res) {
+    findByName: function(req, res) {
       db.coffeeShop
-        .findById(req.params.id)
+        .find({
+          name: req.params.name})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },

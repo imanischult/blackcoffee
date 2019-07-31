@@ -14,9 +14,10 @@ class Reviews extends Component {
 
     componentDidMount() {
         API.getCoffeeShop()
-            .then(data => {
-                console.log(data);
-                let shopNames = data.map(shop => { return { value: shop.name, display: shop.name } })
+            // .then(res => res)
+            .then(res => {
+                console.log(res);
+                let shopNames = res.data.map(shop => { return { value: shop.name, display: shop.name } })
                 this.setState({ shops: [{ value: '', display: '(Select a coffee shop)' }].concat(shopNames) });
             }).catch(error => {
                 console.log(error);
