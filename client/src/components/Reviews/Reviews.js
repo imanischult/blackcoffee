@@ -19,11 +19,12 @@ class Reviews extends Component {
                 console.log(res);
                 let shopNames = res.data.map(shop => { return { value: shop.name, display: shop.name } })
                 this.setState({ shops: [{ value: '', display: '(Select a coffee shop)' }].concat(shopNames) });
-            }).catch(error => {
+            })
+            .catch(error => {
                 console.log(error);
             });
     }
-    //can we have the selected shop pre-set if you come here from a search-result? Could be a Route...
+    //can we have the selected shop pre-set if you come here from a search-result? Could be a Route... we can; need a conditional to set selected value and run a function on mount
 
 
 
