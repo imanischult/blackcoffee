@@ -5,6 +5,7 @@
   "homepage": "https://imanischult.github.io/blackcoffee",
   "dependencies": {
     "@material-ui/core": "^4.2.1",
+    "algoliasearch": "^3.33.0",
     "autosuggest-highlight": "^3.1.1",
     "react": "^16.8.6",
     "react-autosuggest": "^9.4.3",

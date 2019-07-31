@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+// replaces <a> tag with react's Link to prevent the page from refreshing
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 //including for convienience
 import { makeStyles } from "@material-ui/core/styles";
@@ -15,5 +17,5 @@ export default () => {
       <a id="home" href="/">Home</a>
       <a id="review" href="/Reviews">Reviews</a>
     </div>
-  )
-}
+  );
+};
