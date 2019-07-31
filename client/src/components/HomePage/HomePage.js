@@ -4,7 +4,7 @@ import Searchbar from "../Searchbar/Searchbar";
 import Button from "../Button";
 import API from "../../utils/API";
 const algoliasearch = require("algoliasearch");
-const client = algoliasearch("98X3GEBMRE", "ec6500df8d948e205285966022d1ae6d");
+const client = algoliasearch("V63NYRH7LN", "9380ecbed812963b73d661779906c9d2");
 const index = client.initIndex("coffeeshops");
 
 class HomePage extends React.Component {
