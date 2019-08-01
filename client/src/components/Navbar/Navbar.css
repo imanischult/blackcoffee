@@ -1,20 +1,18 @@
+.text {
+  color: antiquewhite;
+  font-family: "Cabin Sketch", sans-serif;
+  font-size: 20pt;
+  margin: 10px;
+}
+
+.text:hover {
+  color: black;
+}
+
 .navbar {
-  height: 80;
-  width: 100vw;
+  justify-content: flex-end;
+  overflow: hidden;
   position: absolute;
   top: 0;
-  padding-left: 1050px;
-  padding-right: 30px;
-}
-
-#home {
-    color: antiquewhite;
-    font-family: "Cabin Sketch", sans-serif;
-    font-size: 20pt;
-}
-
-#review {
-    color: antiquewhite;
-    font-family: "Cabin Sketch", sans-serif;
-    font-size: 20pt;
+  width: 100%;
 }
