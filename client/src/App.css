@@ -9,13 +9,13 @@
 }
 
 .App-header {
-  background-image: url('./images/coffee.jpg');
-  height: 600px;
+  position: relative;
+  background-image: url("./images/coffee.jpg");
+  height: 650px;
   width: 100vw;
   background-attachment: fixed;
   background-size: cover;
 }
-
 
 .App-link {
   color: #61dafb;
@@ -29,3 +29,23 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  position: absolute;
+  font-family: "Cabin Sketch", sans-serif;
+  font-size: 50pt;
+  text-align: center;
+  right: 50%;
+}
+
+/* #child { 
+  position: absolute; 
+  right: 40px; 
+  top: 100px; 
+  width: 200px; 
+  height: 200px; 
+  background-color: #fafafa; 
+  border: solid 3px #78e382; 
+  font-size: 24px; 
+  text-align: center; 
+} */

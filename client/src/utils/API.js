@@ -6,7 +6,7 @@ export default {
     return axios.get("/api/coffee");
   },
   // Gets the coffee shop with the given id
-  getCoffeeShop: function(id) {
+  getCoffeeShopById: function(id) {
     return axios.get("/api/coffee/" + id);
   }
 };
