@@ -10,7 +10,7 @@ function App() {
     <div>
       <div className="App-header">
         <h1 id="intro">
-          <span>I Like My</span> <br /> <span>COFFEE BLACK </span>
+          <span>I Like My</span> <br /> <span>COFFEE BLACK</span>
           <img src={logo} height="80" width="80" alt="Logo" />
         </h1>
       </div>
