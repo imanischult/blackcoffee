@@ -1,4 +1,4 @@
 module.exports = {
-  coffeeShop: require("./coffee"),
-  reviews: require("./reviews")
+  CoffeeShops: require("./coffee"),
+  Review: require("./reviews")
 };

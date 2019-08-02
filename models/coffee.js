@@ -9,6 +9,6 @@ const coffeeShopSchema = new Schema({
   coffeeBrand: { type: String, default: true }
 });
 
-const coffeeShop = mongoose.model("coffeeShop", coffeeShopSchema);
+const coffeeShops = mongoose.model("coffeeShops", coffeeShopSchema);
 
-module.exports = coffeeShop;
+module.exports = coffeeShops;

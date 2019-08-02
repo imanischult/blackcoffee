@@ -1,8 +1,8 @@
 import React from "react";
 import IntroInfo from "../IntroInfo/IntroInfo";
 import Searchbar from "../Searchbar/Searchbar";
-import Button from "../Button";
-import API from "../../utils/API";
+// import Button from "../Button";
+// import API from "../../utils/API";
 const algoliasearch = require("algoliasearch");
 const client = algoliasearch("98X3GEBMRE", "ec6500df8d948e205285966022d1ae6d");
 const index = client.initIndex("coffeeshops");
