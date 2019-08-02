@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3001;
 const routes= require('./routes')
 const mongoose= require('mongoose')
 
-mongoose.connect('mongodb://localhost/BlackCoffee', { useNewUrlParser: true })
+mongoose.connect('mongodb://127.0.0.1:27017/BlackCoffee', { useNewUrlParser: true })
 //
 let db = mongoose.connection;
 

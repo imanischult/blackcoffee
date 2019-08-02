@@ -1,36 +1,38 @@
 const db = require("../models")
 
-// Defining methods for the coffeeShopsController
+// Defining methods for the CoffeeShopssController
 module.exports = {
     findAll: function(req, res) {
       console.log("searching... " + req);
-      db.coffeeShop
-        .find({})
+      db.CoffeeShops
+        .find()
         .sort({ name: -1 })
-        .then(dbModel => res.json(dbModel))
+        .then(dbShop => {res.json(dbShop)
+        console.log(dbShop)
+        })
         .catch(err => res.status(422).json(err));
     },
     findByName: function(req, res) {
-      db.coffeeShop
+      db.CoffeeShops
         .find({
           name: req.params.name})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
     create: function(req, res) {
-      db.coffeeShop
+      db.CoffeeShops
         .create(req.body)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
     update: function(req, res) {
-      db.coffeeShop
+      db.CoffeeShops
         .findOneAndUpdate({ _id: req.params.id }, req.body)
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
     remove: function(req, res) {
-      db.coffeeShop
+      db.CoffeeShops
         .findById({ _id: req.params.id })
         .then(dbModel => dbModel.remove())
         .then(dbModel => res.json(dbModel))
