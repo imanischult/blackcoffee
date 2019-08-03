@@ -2,10 +2,10 @@ import React from "react";
 import IntroInfo from "../IntroInfo/IntroInfo";
 import Navbar from "../Navbar/Navbar";
 import Searchbar from "../Searchbar/Searchbar";
-import Button from "../Button";
 // import API from "../../utils/API";
 import logo from "../../images/coffee-logo.svg";
 
+// import API from "../../utils/API";
 const algoliasearch = require("algoliasearch");
 const client = algoliasearch("V63NYRH7LN", "3861e9591508b24dd0e4525110196d37");
 const index = client.initIndex("coffeeshops");

@@ -3,10 +3,22 @@ import axios from "axios";
 export default {
   // Gets all coffee shops
   getCoffeeShop: function() {
-    return axios.get("/api/coffee");
+    return axios.get("/api/coffee/");
   },
-  // Gets the coffee shop with the given id
-  getCoffeeShopById: function(id) {
-    return axios.get("/api/coffee/" + id);
+  // Gets the coffee shop with the given name
+  getCoffeeShopById: function(name) {
+    return axios.get("/api/coffee/" + name);
+  },
+  getAllReviews: function() {
+    return axios.get("/api/reviews");
+  },
+
+  getShopReviews: function(name) {
+    return axios.get(`/api/reviews/${name}`);
+  },
+
+  createReview: function(review) {
+    return axios.post(`/api/reviews/`, review);
   }
+
 };
