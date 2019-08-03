@@ -69,7 +69,13 @@ class HomePage extends React.Component {
         <IntroInfo />
 
         {this.state.coffeeshops.map(shop => (
-          <div key={shop._id}>{shop.Name}</div>
+          <div className="container">
+            <h4 key={shop._id}>{shop.Name}</h4>
+            <div>{shop.Address}</div>
+            <div>{shop.Description}</div>
+            <div>{shop.Area}</div>
+            <br />
+          </div>
         ))}
       </div>
     );
