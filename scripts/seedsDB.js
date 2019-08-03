@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 const faker = require("faker"); // faker is used to insert fake data https://github.com/marak/Faker.js/
 const db = require("../models");
+const algoliasearch = require("algoliasearch");
+require("dotenv").config();
+
+const client = algoliasearch("V63NYRH7LN", process.env.ALGOLIA_KEY);
+const index = client.initIndex("coffeeshops");
 
 async function asyncForEach(array, callback) {
   console.log("looping over", array.length, " items.");
@@ -89,6 +94,20 @@ async function main() {
     console.log(error);
     process.exit(1);
   }
+
+  console.log("Clearing Index");
+  await index.clearIndex();
+  // (err, content) => {
+  //   if (err) throw err;
+
+  //   console.log(content);
+  // });
+
+  console.log("Adding coffeeshops");
+  await index.addObjects(createdShops.ops);
+  // , (err, content) => {
+  //   console.log(content);
+  // });
 
   process.exit(0);
 }
