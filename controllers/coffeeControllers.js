@@ -14,7 +14,6 @@ module.exports = {
         .find({})
         .sort({ name: -1 })
         .then(dbShop => {res.json(dbShop)
-        console.log(dbShop)
         })
         .catch(err => res.status(422).json(err));
     },
