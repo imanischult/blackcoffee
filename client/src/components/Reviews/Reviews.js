@@ -19,7 +19,7 @@ class Reviews extends Component {
           return { value: shop.name, display: shop.name };
         });
         this.setState({
-          shops: [{ value: "", display: "(Select a coffee shop)" }].concat(
+          shops: [{ value: "", display: "Select a coffee shop" }].concat(
             shopNames
           ),
           selectedShop: ""
