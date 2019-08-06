@@ -1,4 +1,4 @@
 module.exports = {
-  Coffee: require("./coffeeController"),
+  Coffee: require("./coffeeControllers"),
   Reviews: require("./reviewsController")
 };
