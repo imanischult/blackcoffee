@@ -1,17 +1,11 @@
-/* h1 {
-    text-align: center;
-}
-
-#intro {
-  height: 100px;
-  width: 100vw;
-  background-attachment: fixed;
-  background-size: cover;
-  
-}
-*/
-
-h1 {
+#introPar {
   font-family: "Cabin Sketch", sans-serif;
-  font-size: 50pt;
+  font-size: 23pt;
+  text-align: center;
+  /* background-color: grey; */
+  padding: 25px;
+}
+
+.card {
+  margin: 50px 0px;
 }
