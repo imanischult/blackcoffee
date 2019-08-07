@@ -4,7 +4,7 @@ import API from "../../utils/API";
 class Reviews extends Component {
   state = {
     shops: [],
-    selectedShop: {},
+    selectedShop: "",
     reviewbody: "",
     reviewer: "",
     reviewResults: [],
@@ -53,9 +53,13 @@ class Reviews extends Component {
   };
 
   getReviews = () => {
-    API.getShopReviews(state.selectedShop)
+    API.getShopReviewsByName(this.state.selectedShop)
+    .then(res => { this.setState({
+      reviewResults: res.data
+    })
+      
+    })};
 
-  };
 
   render() {
     return (
@@ -99,7 +103,7 @@ class Reviews extends Component {
           </button>
         </form>
         <div className="results">
-        { this.state.ifReviews ?  this.state.reviewResults.map(revRes => (
+        { this.state.reviewResults.length > 0 ?  this.state.reviewResults.map(revRes => (
           <div className="container">
             <h4 key={revRes._id}>{revRes.reviewer}</h4>
             <div>{revRes.date}</div>
