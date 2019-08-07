@@ -4,19 +4,19 @@ import API from "../../utils/API";
 class Reviews extends Component {
   state = {
     shops: [],
-    selectedShop: "",
+    selectedShop: {},
     reviewbody: "",
     reviewer: "",
-    reviewResults: []
+    reviewResults: [],
+    ifReviews: false
   };
 
   componentDidMount() {
     API.getCoffeeShop()
-      // .then(res => res)
       .then(res => {
-        console.log(res);
+        // console.log(res);
         let shopNames = res.data.map(shop => {
-          return { value: shop.name, display: shop.name };
+          return { value: shop.name, display: shop.name, id: shop._id };
         });
         this.setState({
           shops: [{ value: "", display: "(Select a coffee shop)" }].concat(
@@ -36,11 +36,25 @@ class Reviews extends Component {
     this.setState({
       [name]: value
     });
+    // if(this.state.selectedShop) {
+    //   getReviews();
+    // }
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
+    //form validations will have to happen here
+    API.createReview({
+      coffeeShopId: "",
+      reviewer: this.state.reviewer,
+      review_text: this.state.reviewbody,
+    })
     console.log(this.state);
+  };
+
+  getReviews = () => {
+    API.getShopReviews(state.selectedShop)
+
   };
 
   render() {
@@ -48,7 +62,7 @@ class Reviews extends Component {
       <div className="App-header">
         <form className="form-group" name="reviewForm">
           <label>
-            Choose a Coffee Shop
+            Choose a Coffee Shop: 
             <select
               name="selectedShop"
               value={this.state.selectedShop}
@@ -84,7 +98,18 @@ class Reviews extends Component {
             Submit
           </button>
         </form>
-        <div className="results">No reviews yet.</div>
+        <div className="results">
+        { this.state.ifReviews ?  this.state.reviewResults.map(revRes => (
+          <div className="container">
+            <h4 key={revRes._id}>{revRes.reviewer}</h4>
+            <div>{revRes.date}</div>
+            <div>{revRes.review_text}</div>
+          </div>
+        )) : 
+          "No reviews yet."
+        }
+        </div>
+       
       </div>
     );
   }
