@@ -1,9 +1,8 @@
 import React from "react";
 import IntroInfo from "../IntroInfo/IntroInfo";
-import Navbar from "../Navbar/Navbar";
-import Searchbar from "../Searchbar/Searchbar";
+// import Searchbar from "../Searchbar/Searchbar";
 // import API from "../../utils/API";
-import logo from "../../images/coffee-logo.svg";
+// import logo from "../../images/coffee-logo.svg";
 
 // import API from "../../utils/API";
 const algoliasearch = require("algoliasearch");

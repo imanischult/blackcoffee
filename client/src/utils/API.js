@@ -13,8 +13,8 @@ export default {
     return axios.get("/api/reviews");
   },
 
-  getShopReviews: function(name) {
-    return axios.get(`/api/reviews/${name}`);
+  getShopReviewsById: function(shopId) {
+    return axios.get(`/api/reviews/${shopId}`);
   },
 
   createReview: function(review) {
