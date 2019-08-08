@@ -2,7 +2,6 @@
   "name": "blackcoffee",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
   "homepage": "https://imanischult.github.io/blackcoffee",
   "dependencies": {
     "@material-ui/core": "^4.2.1",
@@ -22,6 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:3001/",
   "eslintConfig": {
     "extends": "react-app"
   },
