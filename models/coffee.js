@@ -6,6 +6,7 @@ const coffeeShopSchema = new Schema({
   address: { type: String, required: true },
   description: String,
   area: { type: String, default: true },
+  image: { type: String, default: true },
   coffeeBrand: { type: String, default: true }
 });
 
