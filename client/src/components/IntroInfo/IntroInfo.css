@@ -1,15 +1,35 @@
-/* h1 {
-    text-align: center;
+/* controls size of paper card containing */
+.makeStyles-root-1 {
+  padding: 24px 16px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 1100px;
 }
 
-#intro {
-  height: 100px;
-  width: 100vw;
-  background-attachment: fixed;
-  background-size: cover;
-  
+/* actual paper card */
+div.MuiPaper-root.MuiPaper-elevation1.makeStyles-root-1.MuiPaper-rounded {
+  background-color: #665033;
+  opacity: 0.98;
 }
-*/
+
+/* controls "Welcome to Coffee BLACK" header */
+h3.MuiTypography-root.MuiTypography-h5 {
+  font-size: 2.9rem;
+  font-family: "Cabin Sketch", sans-serif;
+  color: white;
+  padding: 5px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
+
+/* paragraph info intro */
+p.MuiTypography-root.MuiTypography-body1 {
+  color: white;
+  font-weight: 800;
+  font-size: 1.18rem;
+}
 
 h1 {
   font-family: "Cabin Sketch", sans-serif;
