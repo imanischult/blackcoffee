@@ -1,14 +1,19 @@
 const db = require("../models")
 
 // Defining methods for the CoffeeShopssController
+
+// db.CoffeeShops.create({name: "Village Coffee", address: "420 Euclid", description: "so damn chill.", area: "Little 5 Points", coffeeBrand: "Atlanta Coffee Company"}).then(something => console.log(something))
+
+// db.CoffeeShops.find({}).then(dbShop => {
+//   console.log(dbShop)
+//   })
 module.exports = {
     findAll: function(req, res) {
-      console.log("searching... " + req);
+      console.log("searching for shops...");
       db.CoffeeShops
-        .find()
+        .find({})
         .sort({ name: -1 })
         .then(dbShop => {res.json(dbShop)
-        console.log(dbShop)
         })
         .catch(err => res.status(422).json(err));
     },

@@ -6,15 +6,24 @@ export default {
     return axios.get("/api/coffee/");
   },
   // Gets the coffee shop with the given name
-  getCoffeeShopById: function(name) {
-    return axios.get("/api/coffee/" + name);
+  getCoffeeShopById: function(shopId) {
+    return axios.get("/api/coffee/" + shopId);
   },
+
+  getCoffeeShopByName: function(shopName) {
+    return axios.get(`/api/coffee/${shopName}`);
+  },
+
   getAllReviews: function() {
     return axios.get("/api/reviews");
   },
 
-  getShopReviews: function(name) {
-    return axios.get(`/api/reviews/${name}`);
+  getShopReviewsById: function(shopId) {
+    return axios.get(`/api/reviews/${shopId}`);
+  },
+
+  getShopReviewsByName: function(shopName) {
+    return axios.get(`/api/reviews/${shopName}`);
   },
 
   createReview: function(review) {

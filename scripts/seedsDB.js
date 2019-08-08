@@ -16,28 +16,28 @@ async function asyncForEach(array, callback) {
 
 const coffeeShops = [
   {
-    Name: "Urban Grind",
-    Address: "962 Marietta St NW, Atlanta, GA 30318",
-    Description:
+    name: "Urban Grind",
+    address: "962 Marietta St NW, Atlanta, GA 30318",
+    description:
       "Hip coffeehouse with cafe menu & free WiFi holds film screenings, poetry slams & other arty events.",
-    Area: "West Atlanta",
-    CoffeeBrand: "Bratdorf Bronson"
+    area: "West Atlanta",
+    coffeeBrand: "Bratdorf Bronson"
   },
   {
-    Name: "Buzz",
-    Address: "2315 Cascade Rd SW, Atlanta, GA 30311",
-    Description:
+    name: "Buzz",
+    address: "2315 Cascade Rd SW, Atlanta, GA 30311",
+    description:
       "BUZZ will be a premier stop for art, culture, and community. We will feature premium coffee from Stumptown Coffee Roasters as well as Old World and New World Wines in an art filled setting.",
-    Area: "South Atlanta",
-    CoffeeBrand: "Stumptown Coffee Roasters"
+    area: "South Atlanta",
+    coffeeBrand: "Stumptown Coffee Roasters"
   },
   {
-    Name: "Just Add Honey Tea Company",
-    Address: "209 Edgewood Ave NE, Atlanta, GA 30303",
-    Description:
+    name: "Just Add Honey Tea Company",
+    address: "209 Edgewood Ave NE, Atlanta, GA 30303",
+    description:
       "Just Add Honey Tea Co. wants you to enjoy the best, freshest, and most flavorful teas with every sip. Whether it is a black tea, herbal tea, fruit tea or specialty tea, just add honey wants you to enjoy every cup. Anytime. Anywhere.",
-    Area: "East Atlanta/Edgewood",
-    CoffeeBrand: "Kuntz Coffee"
+    area: "East Atlanta/Edgewood",
+    coffeeBrand: "Kuntz Coffee"
   }
 ];
 

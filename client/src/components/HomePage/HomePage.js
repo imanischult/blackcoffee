@@ -1,9 +1,8 @@
 import React from "react";
 import IntroInfo from "../IntroInfo/IntroInfo";
-import Navbar from "../Navbar/Navbar";
-import Searchbar from "../Searchbar/Searchbar";
+// import Searchbar from "../Searchbar/Searchbar";
 // import API from "../../utils/API";
-import logo from "../../images/coffee-logo.svg";
+// import logo from "../../images/coffee-logo.svg";
 
 // import API from "../../utils/API";
 const algoliasearch = require("algoliasearch");
@@ -51,7 +50,7 @@ class HomePage extends React.Component {
             </h1>
             <form className="form-inline" onSubmit={this.loadCoffeeshops}>
               <div className="form-row">
-                <label className="sr-only">Coffe Search</label>
+                <label className="sr-only">Coffee Search</label>
                 <input
                   className="form-control form-control-lg"
                   name="search"
