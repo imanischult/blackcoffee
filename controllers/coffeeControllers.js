@@ -2,7 +2,7 @@ const db = require("../models")
 
 // Defining methods for the CoffeeShopssController
 
-// db.CoffeeShops.create({name: "Buzz", address: "2315 Cascade Rd SW, Atlanta, GA 30311", description: "BUZZ will be a premier stop for art, culture, and community. We will feature premium coffee from Stumptown Coffee Roasters as well as Old World and New World Wines in an art filled setting.", area: "South Atlanta", coffeeBrand: "Stumptown Coffee Roasters"}).then(something => console.log(something))
+// db.CoffeeShops.create({name: "Village Coffee", address: "420 Euclid", description: "so damn chill.", area: "Little 5 Points", coffeeBrand: "Atlanta Coffee Company"}).then(something => console.log(something))
 
 // db.CoffeeShops.find({}).then(dbShop => {
 //   console.log(dbShop)
