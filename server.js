@@ -27,7 +27,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   // Express will serve up production assets
   // app.use(express.static(path.join(__dirname, "client/build")));
-  app.use(express.static("build"));
+  app.use(express.static(__dirname + "/client/build"));
 }
 
 // app.get("*", (req, res) => {
