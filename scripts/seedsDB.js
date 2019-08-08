@@ -65,7 +65,7 @@ async function main() {
   }
 
   try {
-    await db.coffeeShop.deleteMany({});
+    await db.CoffeeShops.deleteMany({});
     console.log("deleted existing coffee shops");
   } catch (error) {
     console.log("error deleting coffeeshops");
@@ -74,7 +74,7 @@ async function main() {
   }
 
   try {
-    createdShops = await db.coffeeShop.collection.insertMany(coffeeShops);
+    createdShops = await db.CoffeeShops.collection.insertMany(coffeeShops);
     console.log("Shops have been created");
   } catch (error) {
     console.log("error inserting coffeeshops");
@@ -83,7 +83,7 @@ async function main() {
   }
 
   try {
-    await db.reviews.deleteMany({});
+    await db.Reviews.deleteMany({});
   } catch (error) {
     console.log("error deleting existing reviews");
     console.log(error);
@@ -92,9 +92,10 @@ async function main() {
 
   try {
     await asyncForEach(createdShops.ops, async shop => {
-      const review = await db.reviews.create({
+      const review = await db.Reviews.create({
         coffeeShopId: shop._id,
-        user_name: faker.name.findName(),
+        coffeeShopName: shop.name,
+        reviewer: faker.name.findName(),
         review_text: faker.lorem.paragraph()
       });
     });
