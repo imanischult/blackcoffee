@@ -24,7 +24,7 @@ const coffeeShops = [
     coffeeBrand: "Bratdorf Bronson"
   },
   {
-    name: "Buzz",
+    name: "Buzz Coffee and Winehouse",
     address: "2315 Cascade Rd SW, Atlanta, GA 30311",
     description:
       "BUZZ will be a premier stop for art, culture, and community. We will feature premium coffee from Stumptown Coffee Roasters as well as Old World and New World Wines in an art filled setting.",
@@ -38,6 +38,14 @@ const coffeeShops = [
       "Just Add Honey Tea Co. wants you to enjoy the best, freshest, and most flavorful teas with every sip. Whether it is a black tea, herbal tea, fruit tea or specialty tea, just add honey wants you to enjoy every cup. Anytime. Anywhere.",
     area: "East Atlanta/Edgewood",
     coffeeBrand: "Kuntz Coffee"
+  },
+  {
+    name: "Grant Park Coffeehouse",
+    address: "753 Cherokee SE, Atlanta, GA 30315",
+    description:
+      "Owner Rahel Belfield dreamed of a cozy place where she could take her daughter Salomae to have a good cup of coffee and tasty treats. That dream has become Grant Park Coffeehouse and we welcome you to share in our hospitality.",
+    area: "Grant Park/Ormewood",
+    coffeeBrand: "Grant Park Ethiopian Coffee"
   }
 ];
 
