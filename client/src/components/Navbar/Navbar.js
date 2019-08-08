@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 //including for convienience
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 
 // var link = document.createElement('link');
 // link.setAttribute('rel', 'stylesheet');
@@ -14,6 +14,7 @@ import { makeStyles } from "@material-ui/core/styles";
 export default () => {
   return (
     <div className="navbar">
+      {" "}
       <Link className="text" to="/">
         Home{" "}
       </Link>

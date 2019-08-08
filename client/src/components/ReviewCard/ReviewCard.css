@@ -1,0 +1,18 @@
+div.RenderReviews {
+  position: relative;
+  top: 550px;
+  left: -250px;
+}
+
+input.YourNameInput {
+  font-size: 20px;
+  width: 500px;
+  outline-color: #665033;
+  border-radius: 4px;
+}
+
+/* .form-group {
+  margin-bottom: 1rem;
+  position: relative;
+  left: 500px;
+} */
