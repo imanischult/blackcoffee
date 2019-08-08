@@ -59,9 +59,6 @@ class Reviews extends Component {
 
     };
 
-
-
-
     handleFormSubmit = event => {
         event.preventDefault();
         //form validations will have to happen here
