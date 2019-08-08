@@ -9,18 +9,34 @@
 }
 
 .App-header {
-  background-image: url('./images/coffee.jpg');
-  height: 600px;
+  position: relative;
+  background-image: url("./images/coffee.jpg");
+  height: 650px;
   width: 100vw;
   background-attachment: fixed;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .App-link {
   color: #61dafb;
 }
 
+.search {
+  display: flex;
+}
+
+.search-input {
+  padding: 1em 2em;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -28,4 +44,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  font-family: "Cabin Sketch", sans-serif;
+  font-size: 50pt;
+  text-align: center;
 }
