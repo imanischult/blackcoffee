@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const bCoffeeSchema = new Schema({
-  Name: { type: String, required: true },
-  Address: { type: String, required: true },
-  Description: String,
-  Area: { type: String, default: true },
-  CoffeeBrand: { type: String, default: true }
+const coffeeShopSchema = new Schema({
+  name: { type: String, required: true },
+  address: { type: String, required: true },
+  description: String,
+  area: { type: String, default: true },
+  coffeeBrand: { type: String, default: true }
 });
 
-const BCoffee = mongoose.model("BlackCoffee", bCoffeeSchema);
+const coffeeShops = mongoose.model("coffeeShops", coffeeShopSchema);
 
-module.exports = BCoffee;
+module.exports = coffeeShops;

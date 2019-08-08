@@ -1,0 +1,19 @@
+.text {
+  color: antiquewhite;
+  font-family: "Cabin Sketch", sans-serif;
+  font-size: 20pt;
+  margin: 10px;
+}
+
+.text:hover {
+  color: black;
+}
+
+.navbar {
+  justify-content: flex-end;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
