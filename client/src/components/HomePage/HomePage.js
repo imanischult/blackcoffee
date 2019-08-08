@@ -1,10 +1,11 @@
 import React from "react";
 import IntroInfo from "../IntroInfo/IntroInfo";
 import "./homepage.css";
-import Navbar from "../Navbar/Navbar";
-import Searchbar from "../Searchbar/Searchbar";
+// import Navbar from "../Navbar/Navbar";
+// import Searchbar from "../Searchbar/Searchbar";
+// import Searchbar from "../Searchbar/Searchbar";
 // import API from "../../utils/API";
-import logo from "../../images/coffee-logo.svg";
+// import logo from "../../images/coffee-logo.svg";
 
 // import API from "../../utils/API";
 const algoliasearch = require("algoliasearch");
@@ -75,7 +76,7 @@ class HomePage extends React.Component {
         {this.state.coffeeshops.map(shop => (
           <div className="container">
             <h4 key={shop._id}>{shop.Name}</h4>
-            
+
             <div>{shop.Address}</div>
             <div>{shop.Description}</div>
             <div>{shop.Area}</div>
