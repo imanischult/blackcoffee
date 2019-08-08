@@ -82,7 +82,7 @@ class Reviews extends Component {
 
   render() {
     return (
-      <div className="App-header">
+      <div className="App-header" style={{ marginTop: "75px" }}>
         <form className="form-group" name="reviewForm">
           <label className="CCSInput">
             Choose a Coffee Shop:

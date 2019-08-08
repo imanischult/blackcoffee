@@ -65,15 +65,10 @@ class HomePage extends React.Component {
             </form>
           </div>
         </div>
-
+        <IntroInfo />
         {this.state.coffeeshops.map(shop => (
           <div className="container">
             <div className="card">
-              <img
-                src="../../images/buzz.jpeg"
-                className="card-img-top"
-                alt="buzz"
-              />
               <h4 key={shop._id}>{shop.name}</h4>
 
               <div>{shop.address}</div>
@@ -83,7 +78,6 @@ class HomePage extends React.Component {
             </div>
           </div>
         ))}
-        <IntroInfo />
       </div>
     );
   }

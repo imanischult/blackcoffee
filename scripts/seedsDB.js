@@ -21,8 +21,6 @@ const coffeeShops = [
     description:
       "Hip coffeehouse with cafe menu & free WiFi holds film screenings, poetry slams & other arty events.",
     area: "West Atlanta",
-    image:
-      "https://lh3.googleusercontent.com/amltWqR_j7OIIyvyATyGdjHwIfA8fcGcatQbPHkwxlHTC5wf0lDtqtLylkKUQvFr8y22=s113",
     coffeeBrand: "Bratdorf Bronson"
   },
 
@@ -32,8 +30,6 @@ const coffeeShops = [
     description:
       "BUZZ will be a premier stop for art, culture, and community. We will feature premium coffee from Stumptown Coffee Roasters as well as Old World and New World Wines in an art filled setting.",
     area: "South Atlanta",
-    image:
-      "https://lh3.googleusercontent.com/amltWqR_j7OIIyvyATyGdjHwIfA8fcGcatQbPHkwxlHTC5wf0lDtqtLylkKUQvFr8y22=s113",
     coffeeBrand: "Stumptown Coffee Roasters"
   },
   {
@@ -42,8 +38,6 @@ const coffeeShops = [
     description:
       "Just Add Honey Tea Co. wants you to enjoy the best, freshest, and most flavorful teas with every sip. Whether it is a black tea, herbal tea, fruit tea or specialty tea, just add honey wants you to enjoy every cup. Anytime. Anywhere.",
     area: "East Atlanta/Edgewood",
-    image:
-      "https://lh3.googleusercontent.com/amltWqR_j7OIIyvyATyGdjHwIfA8fcGcatQbPHkwxlHTC5wf0lDtqtLylkKUQvFr8y22=s113",
     coffeeBrand: "Kuntz Coffee"
   },
   {

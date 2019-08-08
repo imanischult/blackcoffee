@@ -15,7 +15,7 @@ body {
 .App-header {
   position: relative;
   background-image: url("./images/coffee.jpg");
-  height: 365px;
+  height: 500px;
   width: 100vw;
   background-attachment: fixed;
   background-size: cover;
