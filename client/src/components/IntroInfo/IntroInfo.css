@@ -31,7 +31,6 @@ p.MuiTypography-root.MuiTypography-body1 {
   font-size: 1.18rem;
 }
 
-h1 {
-  font-family: "Cabin Sketch", sans-serif;
-  font-size: 50pt;
+.card {
+  margin: 50px 0px;
 }
