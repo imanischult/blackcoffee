@@ -49,7 +49,7 @@ class HomePage extends React.Component {
         <div className="App-header">
           <div className="flex-center">
             <h1 id="intro">
-              <span className="ILM">I Like My</span> <br />{" "}
+              <span className="ILM">I Like My...</span> <br />{" "}
               <span className="CB">
                 COFFEE <strong>BLACK</strong>
               </span>
