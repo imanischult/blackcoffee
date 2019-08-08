@@ -2,7 +2,7 @@
   "name": "blackcoffee",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://imanischult.github.io/blackcoffee",
+  "homepage": "https://coffee-black.herokuapp.com",
   "dependencies": {
     "@material-ui/core": "^4.2.1",
     "algoliasearch": "^3.33.0",
