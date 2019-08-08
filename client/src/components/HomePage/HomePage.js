@@ -1,15 +1,9 @@
 import React from "react";
 import IntroInfo from "../IntroInfo/IntroInfo";
 import "./homepage.css";
-// import Navbar from "../Navbar/Navbar";
-// import Searchbar from "../Searchbar/Searchbar";
-// import Searchbar from "../Searchbar/Searchbar";
-// import API from "../../utils/API";
-// import logo from "../../images/coffee-logo.svg";
 
-// import API from "../../utils/API";
 const algoliasearch = require("algoliasearch");
-const client = algoliasearch("V63NYRH7LN", "3861e9591508b24dd0e4525110196d37");
+const client = algoliasearch("V63NYRH7LN", "9380ecbed812963b73d661779906c9d2");
 const index = client.initIndex("coffeeshops");
 
 class HomePage extends React.Component {
@@ -72,20 +66,14 @@ class HomePage extends React.Component {
           </div>
         </div>
         <IntroInfo />
-
         {this.state.coffeeshops.map(shop => (
           <div className="container">
             <div className="card">
-              <img
-                src="../../images/buzz.jpeg"
-                className="card-img-top"
-                alt="buzz"
-              />
-              <h4 key={shop._id}>{shop.Name}</h4>
+              <h4 key={shop._id}>{shop.name}</h4>
 
-              <div>{shop.Address}</div>
-              <div>{shop.Description}</div>
-              <div>{shop.Area}</div>
+              <div>{shop.address}</div>
+              <div>{shop.description}</div>
+              <div>{shop.area}</div>
               <br />
             </div>
           </div>

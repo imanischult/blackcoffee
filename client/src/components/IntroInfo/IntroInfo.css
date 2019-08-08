@@ -6,7 +6,6 @@
   margin-bottom: 40px;
   width: 1100px;
 }
-
 /* actual paper card */
 div.MuiPaper-root.MuiPaper-elevation1.makeStyles-root-1.MuiPaper-rounded {
   background-color: #665033;
@@ -31,7 +30,6 @@ p.MuiTypography-root.MuiTypography-body1 {
   font-size: 1.18rem;
 }
 
-h1 {
-  font-family: "Cabin Sketch", sans-serif;
-  font-size: 50pt;
+.card {
+  margin: 50px 0px;
 }

@@ -21,19 +21,15 @@ const coffeeShops = [
     description:
       "Hip coffeehouse with cafe menu & free WiFi holds film screenings, poetry slams & other arty events.",
     area: "West Atlanta",
-    image:
-      "https://lh3.googleusercontent.com/amltWqR_j7OIIyvyATyGdjHwIfA8fcGcatQbPHkwxlHTC5wf0lDtqtLylkKUQvFr8y22=s113",
     coffeeBrand: "Bratdorf Bronson"
   },
 
   {
-    name: "Buzz",
+    name: "Buzz Coffee and Winehouse",
     address: "2315 Cascade Rd SW, Atlanta, GA 30311",
     description:
       "BUZZ will be a premier stop for art, culture, and community. We will feature premium coffee from Stumptown Coffee Roasters as well as Old World and New World Wines in an art filled setting.",
     area: "South Atlanta",
-    image:
-      "https://lh3.googleusercontent.com/amltWqR_j7OIIyvyATyGdjHwIfA8fcGcatQbPHkwxlHTC5wf0lDtqtLylkKUQvFr8y22=s113",
     coffeeBrand: "Stumptown Coffee Roasters"
   },
   {
@@ -42,9 +38,15 @@ const coffeeShops = [
     description:
       "Just Add Honey Tea Co. wants you to enjoy the best, freshest, and most flavorful teas with every sip. Whether it is a black tea, herbal tea, fruit tea or specialty tea, just add honey wants you to enjoy every cup. Anytime. Anywhere.",
     area: "East Atlanta/Edgewood",
-    image:
-      "https://lh3.googleusercontent.com/amltWqR_j7OIIyvyATyGdjHwIfA8fcGcatQbPHkwxlHTC5wf0lDtqtLylkKUQvFr8y22=s113",
     coffeeBrand: "Kuntz Coffee"
+  },
+  {
+    name: "Grant Park Coffeehouse",
+    address: "753 Cherokee SE, Atlanta, GA 30315",
+    description:
+      "Owner Rahel Belfield dreamed of a cozy place where she could take her daughter Salomae to have a good cup of coffee and tasty treats. That dream has become Grant Park Coffeehouse and we welcome you to share in our hospitality.",
+    area: "Grant Park/Ormewood",
+    coffeeBrand: "Grant Park Ethiopian Coffee"
   }
 ];
 
@@ -64,7 +66,7 @@ async function main() {
   }
 
   try {
-    await db.coffeeShop.deleteMany({});
+    await db.CoffeeShops.deleteMany({});
     console.log("deleted existing coffee shops");
   } catch (error) {
     console.log("error deleting coffeeshops");
@@ -73,7 +75,7 @@ async function main() {
   }
 
   try {
-    createdShops = await db.coffeeShop.collection.insertMany(coffeeShops);
+    createdShops = await db.CoffeeShops.collection.insertMany(coffeeShops);
     console.log("Shops have been created");
   } catch (error) {
     console.log("error inserting coffeeshops");
@@ -82,7 +84,7 @@ async function main() {
   }
 
   try {
-    await db.reviews.deleteMany({});
+    await db.Reviews.deleteMany({});
   } catch (error) {
     console.log("error deleting existing reviews");
     console.log(error);
@@ -91,9 +93,10 @@ async function main() {
 
   try {
     await asyncForEach(createdShops.ops, async shop => {
-      const review = await db.reviews.create({
+      const review = await db.Reviews.create({
         coffeeShopId: shop._id,
-        user_name: faker.name.findName(),
+        coffeeShopName: shop.name,
+        reviewer: faker.name.findName(),
         review_text: faker.lorem.paragraph()
       });
     });
