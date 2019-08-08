@@ -66,6 +66,7 @@ class Reviews extends Component {
           <br />
           <label className="Review">
             Write your review here
+            <br />
             <textarea
               className="ReviewTextArea"
               name="reviewbody"
