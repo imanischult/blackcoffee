@@ -112,6 +112,7 @@ class Reviews extends Component {
           <br />
           <label className="YourNameLabel">
             Your Name
+            <br />
             <input
               className="YourNameInput"
               type="text"
@@ -128,7 +129,7 @@ class Reviews extends Component {
             Submit
           </button>
         </form>
-        <div>
+        <div className="RenderReviews">
           {this.state.reviewResults.map(reviewResult => (
             <ReviewCard
               key={reviewResult._id}
