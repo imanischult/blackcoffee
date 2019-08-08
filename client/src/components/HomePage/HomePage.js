@@ -56,7 +56,7 @@ class HomePage extends React.Component {
             </h1>
             <form className="form-inline" onSubmit={this.loadCoffeeshops}>
               <div className="form-row">
-                <label className="sr-only">Coffe Search</label>
+                <label className="sr-only">Coffee Search</label>
                 <input
                   className="form-control form-control-lg"
                   name="search"
@@ -75,13 +75,14 @@ class HomePage extends React.Component {
 
         {this.state.coffeeshops.map(shop => (
           <div className="container">
-            <h4 key={shop._id}>{shop.Name}</h4>
+            <div className="card">
+              <h4 key={shop._id}>{shop.Name}</h4>
 
-            <div>{shop.Address}</div>
-            <div>{shop.Description}</div>
-            <div>{shop.Area}</div>
-            <div>{shop.image}</div>
-            <br />
+              <div>{shop.Address}</div>
+              <div>{shop.Description}</div>
+              <div>{shop.Area}</div>
+              <br />
+            </div>
           </div>
         ))}
       </div>
