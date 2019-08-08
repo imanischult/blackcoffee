@@ -8,7 +8,7 @@ class Reviews extends Component {
     reviewbody: "",
     reviewer: "",
     reviewResults: [],
-    ifReviews: false
+    selectedShopId: "",
   };
 
   componentDidMount() {
@@ -22,7 +22,8 @@ class Reviews extends Component {
           shops: [{ value: "", display: "(Select a coffee shop)" }].concat(
             shopNames
           ),
-          selectedShop: ""
+          selectedShop: "",
+          selectedShopId: "",
         });
       })
       .catch(error => {
@@ -31,34 +32,54 @@ class Reviews extends Component {
   }
   //need to figure this: if coming from a link that contains a name param, set selected shop to that in the state.
 
+  
+
+
   handleInputChange = event => {
-    const { name, value } = event.target;
+    const {name, value} = event.target;
     this.setState({
-      [name]: value
-    });
-    // if(this.state.selectedShop) {
-    //   getReviews();
-    // }
-  };
+      [name]: value,
+    })};
+
+  handleNameSelect = event => {
+    const {name, value, key} = event.target;
+    this.setState({
+      [name]: value,
+      selectedShopId: key 
+    })};
+  
+    
+  
 
   handleFormSubmit = event => {
     event.preventDefault();
     //form validations will have to happen here
     API.createReview({
-      coffeeShopId: "",
+      coffeeShopId: this.state.selectedShopId,
+      coffeeShopName: this.state.selectedShop,
       reviewer: this.state.reviewer,
       review_text: this.state.reviewbody,
     })
+    .then(
+      this.getReviews()
+    )
+    .then(
+      this.setState({
+        reviewbody: "",
+        reviewer: ""
+      })
+    )
     console.log(this.state);
   };
 
   getReviews = () => {
-    API.getShopReviewsByName(this.state.selectedShop)
+    const shopName = this.state.selectedShop;
+    API.getShopReviewsByName(shopName)
     .then(res => { this.setState({
-      reviewResults: res.data
-    })
+      reviewResults: [res.data]
+    }, console.log(res))
       
-    })};
+    })};  
 
 
   render() {
@@ -70,10 +91,10 @@ class Reviews extends Component {
             <select
               name="selectedShop"
               value={this.state.selectedShop}
-              onChange={this.handleInputChange}
+              onChange={this.handleNameSelect}
             >
               {this.state.shops.map(shop => (
-                <option key={shop.value} value={shop.value}>
+                <option key={shop.id} value={shop.value}>
                   {shop.display}
                 </option>
               ))}
@@ -102,19 +123,16 @@ class Reviews extends Component {
             Submit
           </button>
         </form>
-        <div className="results">
-        { this.state.reviewResults.length > 0 ?  this.state.reviewResults.map(revRes => (
-          <div className="container">
-            <h4 key={revRes._id}>{revRes.reviewer}</h4>
-            <div>{revRes.date}</div>
-            <div>{revRes.review_text}</div>
-          </div>
-        )) : 
-          "No reviews yet."
-        }
+
+          {this.state.reviewResults.length > 0 ? this.state.reviewResults.map(reviewResult => (
+            <div className="results">
+              <h4 key={reviewResult._id}>{reviewResult.reviewer}</h4>
+              <div>{reviewResult.date}</div>
+              <div>{reviewResult.review_text}</div>
+            </div>  
+          )) : <p className="noResults">"no results yet"</p>}
         </div>
        
-      </div>
     );
   }
 }

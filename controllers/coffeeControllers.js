@@ -9,7 +9,7 @@ const db = require("../models")
 //   })
 module.exports = {
     findAll: function(req, res) {
-      console.log("searching... " + req);
+      console.log("searching for shops...");
       db.CoffeeShops
         .find({})
         .sort({ name: -1 })
