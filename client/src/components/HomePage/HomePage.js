@@ -3,7 +3,7 @@ import IntroInfo from "../IntroInfo/IntroInfo";
 import "./homepage.css";
 
 const algoliasearch = require("algoliasearch");
-const client = algoliasearch("V63NYRH7LN", "3861e9591508b24dd0e4525110196d37");
+const client = algoliasearch("V63NYRH7LN", "9380ecbed812963b73d661779906c9d2");
 const index = client.initIndex("coffeeshops");
 
 class HomePage extends React.Component {
