@@ -10,9 +10,16 @@ const PORT = process.env.PORT || 3001;
 //   res.sendFile(path.join(__dirname, "client/build/index.html"));
 // });
 
-mongoose.connect("mongodb://127.0.0.1:27017/BlackCoffee", {
-  useNewUrlParser: true
-});
+const routes = require("./routes");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+
+mongoose.connect(
+  "mongodb://heroku_h05lv8xk:pk9qsmle95olhbmcn2a4vgvov5@ds261072.mlab.com:61072/heroku_h05lv8xk",
+  {
+    useNewUrlParser: true
+  }
+);
 //
 let db = mongoose.connection;
 
@@ -21,8 +28,13 @@ db.once("open", () => console.log("connected to the database"));
 // checks if connection with the database is successful
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
+<<<<<<< HEAD
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+=======
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+>>>>>>> 2322ee87319bc02272ddfb090e5bf722914154cf
 
 if (process.env.NODE_ENV === "production") {
   // Express will serve up production assets

@@ -1,12 +1,9 @@
 import React from "react";
 import IntroInfo from "../IntroInfo/IntroInfo";
-// import Searchbar from "../Searchbar/Searchbar";
-// import API from "../../utils/API";
-// import logo from "../../images/coffee-logo.svg";
+import "./homepage.css";
 
-// import API from "../../utils/API";
 const algoliasearch = require("algoliasearch");
-const client = algoliasearch("V63NYRH7LN", "3861e9591508b24dd0e4525110196d37");
+const client = algoliasearch("V63NYRH7LN", "9380ecbed812963b73d661779906c9d2");
 const index = client.initIndex("coffeeshops");
 
 class HomePage extends React.Component {
@@ -46,11 +43,14 @@ class HomePage extends React.Component {
         <div className="App-header">
           <div className="flex-center">
             <h1 id="intro">
-              <span>I Like My</span> <br /> <span>COFFEE BLACK</span>
+              <span className="ILM">I Like My...</span> <br />{" "}
+              <span className="CB">
+                COFFEE <strong>BLACK</strong>
+              </span>
             </h1>
             <form className="form-inline" onSubmit={this.loadCoffeeshops}>
               <div className="form-row">
-                <label className="sr-only">Coffe Search</label>
+                <label className="sr-only">Coffee Search</label>
                 <input
                   className="form-control form-control-lg"
                   name="search"
@@ -66,14 +66,16 @@ class HomePage extends React.Component {
           </div>
         </div>
         <IntroInfo />
-
         {this.state.coffeeshops.map(shop => (
           <div className="container">
-            <h4 key={shop._id}>{shop.Name}</h4>
-            <div>{shop.Address}</div>
-            <div>{shop.Description}</div>
-            <div>{shop.Area}</div>
-            <br />
+            <div className="card">
+              <h4 key={shop._id}>{shop.name}</h4>
+
+              <div>{shop.address}</div>
+              <div>{shop.description}</div>
+              <div>{shop.area}</div>
+              <br />
+            </div>
           </div>
         ))}
       </div>
