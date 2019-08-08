@@ -80,6 +80,7 @@ class HomePage extends React.Component {
             <div>{shop.Address}</div>
             <div>{shop.Description}</div>
             <div>{shop.Area}</div>
+            <div>{shop.image}</div>
             <br />
           </div>
         ))}

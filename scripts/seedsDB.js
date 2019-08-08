@@ -21,8 +21,11 @@ const coffeeShops = [
     description:
       "Hip coffeehouse with cafe menu & free WiFi holds film screenings, poetry slams & other arty events.",
     area: "West Atlanta",
+    image:
+      "https://lh3.googleusercontent.com/amltWqR_j7OIIyvyATyGdjHwIfA8fcGcatQbPHkwxlHTC5wf0lDtqtLylkKUQvFr8y22=s113",
     coffeeBrand: "Bratdorf Bronson"
   },
+
   {
     name: "Buzz",
     address: "2315 Cascade Rd SW, Atlanta, GA 30311",

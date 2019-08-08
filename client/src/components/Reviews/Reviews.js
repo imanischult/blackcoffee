@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import "./Reviews.css";
 
 class Reviews extends Component {
   state = {
@@ -47,9 +48,10 @@ class Reviews extends Component {
     return (
       <div className="App-header">
         <form className="form-group" name="reviewForm">
-          <label>
+          <label className="CCSInput">
             Choose a Coffee Shop
             <select
+              className="CCSSelect"
               name="selectedShop"
               value={this.state.selectedShop}
               onChange={this.handleInputChange}
@@ -62,25 +64,31 @@ class Reviews extends Component {
             </select>
           </label>
           <br />
-          <label>
+          <label className="Review">
             Write your review here
             <textarea
+              className="ReviewTextArea"
               name="reviewbody"
               value={this.state.reviewbody}
               onChange={this.handleInputChange}
             />
           </label>
           <br />
-          <label>
+          <label className="YourNameLabel">
             Your Name
             <input
+              className="YourNameInput"
               type="text"
               name="reviewer"
               value={this.state.reviewer}
               onChange={this.handleInputChange}
             />
           </label>
-          <button type="submit" onClick={this.handleFormSubmit}>
+          <button
+            className="SubmitButt"
+            type="submit"
+            onClick={this.handleFormSubmit}
+          >
             Submit
           </button>
         </form>

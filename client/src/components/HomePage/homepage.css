@@ -5,3 +5,7 @@ span.ILM {
 span.CB {
   font-size: 100px;
 }
+input.form-control.form-control-lg {
+  border: none;
+  outline: none;
+}

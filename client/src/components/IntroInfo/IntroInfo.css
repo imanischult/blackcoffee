@@ -7,6 +7,7 @@
   width: 1100px;
 }
 
+/* actual paper card */
 div.MuiPaper-root.MuiPaper-elevation1.makeStyles-root-1.MuiPaper-rounded {
   background-color: #665033;
   opacity: 0.98;

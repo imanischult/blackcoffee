@@ -15,7 +15,7 @@ body {
 .App-header {
   position: relative;
   background-image: url("./images/coffee.jpg");
-  height: 650px;
+  height: 365px;
   width: 100vw;
   background-attachment: fixed;
   background-size: cover;
@@ -38,6 +38,11 @@ img {
 .search-input {
   padding: 1em 2em;
 }
+
+button.btn.btn-secondary.rounded {
+  font-weight: 500;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
