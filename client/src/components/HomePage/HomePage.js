@@ -1,10 +1,7 @@
 import React from "react";
 import IntroInfo from "../IntroInfo/IntroInfo";
-// import Searchbar from "../Searchbar/Searchbar";
-// import API from "../../utils/API";
-// import logo from "../../images/coffee-logo.svg";
+import "./homepage.css";
 
-// import API from "../../utils/API";
 const algoliasearch = require("algoliasearch");
 const client = algoliasearch("V63NYRH7LN", "3861e9591508b24dd0e4525110196d37");
 const index = client.initIndex("coffeeshops");
@@ -46,7 +43,10 @@ class HomePage extends React.Component {
         <div className="App-header">
           <div className="flex-center">
             <h1 id="intro">
-              <span>I Like My</span> <br /> <span>COFFEE BLACK</span>
+              <span className="ILM">I Like My...</span> <br />{" "}
+              <span className="CB">
+                COFFEE <strong>BLACK</strong>
+              </span>
             </h1>
             <form className="form-inline" onSubmit={this.loadCoffeeshops}>
               <div className="form-row">
@@ -68,11 +68,19 @@ class HomePage extends React.Component {
 
         {this.state.coffeeshops.map(shop => (
           <div className="container">
-            <h4 key={shop._id}>{shop.name}</h4>
-            <div>{shop.address}</div>
-            <div>{shop.description}</div>
-            <div>{shop.area}</div>
-            <br />
+            <div className="card">
+              <img
+                src="../../images/buzz.jpeg"
+                className="card-img-top"
+                alt="buzz"
+              />
+              <h4 key={shop._id}>{shop.name}</h4>
+
+              <div>{shop.address}</div>
+              <div>{shop.description}</div>
+              <div>{shop.area}</div>
+              <br />
+            </div>
           </div>
         ))}
         <IntroInfo />

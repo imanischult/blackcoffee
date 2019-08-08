@@ -1,0 +1,25 @@
+label {
+  font-size: 1.9rem;
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 600;
+  padding: 20px;
+}
+
+textarea {
+  background-color: white;
+  font-size: 20px;
+  width: 500px;
+  outline-color: #665033;
+  border-radius: 4px;
+}
+
+/* submit button */
+button.SubmitButt {
+  border-radius: 4px;
+  font-family: "Cabin Sketch", sans-serif;
+  height: 40px;
+  width: 80px;
+  font-size: 1.2rem;
+  text-align: center;
+  outline-color: #665033;
+}

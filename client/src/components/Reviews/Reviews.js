@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import "./Reviews.css";
 import ReviewCard from "../ReviewCard/ReviewCard.js";
 // import { makeStyles } from "@material-ui/core/styles";
 // import { get } from "https";
