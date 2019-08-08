@@ -29,9 +29,9 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   createReview: function (req, res) {
-    console.log(`adding review... ${req}`);
+    console.log(`adding review... ${req.body}`);
     db.Reviews
-      .create(req)
+      .create(req.body)
       .then(dbReview => {res.json(dbReview)})
       .catch(err => res.status(422).json(err));
   }
