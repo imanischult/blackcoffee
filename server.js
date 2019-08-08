@@ -28,13 +28,8 @@ db.once("open", () => console.log("connected to the database"));
 // checks if connection with the database is successful
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-<<<<<<< HEAD
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-=======
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
->>>>>>> 2322ee87319bc02272ddfb090e5bf722914154cf
 
 if (process.env.NODE_ENV === "production") {
   // Express will serve up production assets
