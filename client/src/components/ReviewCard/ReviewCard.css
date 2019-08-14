@@ -1,7 +1,7 @@
 div.RenderReviews {
-  position: relative;
-  top: 550px;
-  left: -250px;
+  position: relative; 
+  top: 50px;
+  /* left: 50px; */
 }
 
 input.YourNameInput {

@@ -1,6 +1,6 @@
 .App-Header {
-  display: flex;
-  flex-flow: column nowrap;
+  /* display: flex;
+  flex-flow: column nowrap; */
   align-content: center;
   align-items: center;
 }
@@ -36,5 +36,5 @@ button.SubmitButt {
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  padding: 20px 0px;
 }
