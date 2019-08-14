@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const routes = require("./routes");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -9,10 +10,6 @@ const PORT = process.env.PORT || 3001;
 // app.get("/", (req, res) => {
 //   res.sendFile(path.join(__dirname, "client/build/index.html"));
 // });
-
-const routes = require("./routes");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 
 mongoose.connect(
   "mongodb://heroku_h05lv8xk:pk9qsmle95olhbmcn2a4vgvov5@ds261072.mlab.com:61072/heroku_h05lv8xk",
