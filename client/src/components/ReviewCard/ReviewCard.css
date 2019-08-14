@@ -11,6 +11,12 @@ input.YourNameInput {
   border-radius: 4px;
 }
 
+.review {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: .5rem;
+}
+
 /* .form-group {
   margin-bottom: 1rem;
   position: relative;
