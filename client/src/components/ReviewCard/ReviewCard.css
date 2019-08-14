@@ -1,7 +1,7 @@
 div.RenderReviews {
-  position: relative;
-  top: 550px;
-  left: -250px;
+  position: relative; 
+  top: 50px;
+  /* left: 50px; */
 }
 
 input.YourNameInput {
@@ -9,6 +9,12 @@ input.YourNameInput {
   width: 500px;
   outline-color: #665033;
   border-radius: 4px;
+}
+
+.review {
+    border: 1px solid black;
+    padding: 1rem;
+    margin: .5rem;
 }
 
 /* .form-group {

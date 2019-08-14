@@ -19,7 +19,7 @@ body {
   width: 100vw;
   background-attachment: fixed;
   background-size: cover;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
 }

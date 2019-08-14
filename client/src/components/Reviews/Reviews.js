@@ -9,6 +9,7 @@ class Reviews extends Component {
     selectedShop: "",
     reviewbody: "",
     reviewer: "",
+    // date: {},
     reviewResults: [],
     selectedShopId: "",
     hasReviews: false
@@ -60,7 +61,8 @@ class Reviews extends Component {
       coffeeShopId: this.state.selectedShopId,
       coffeeShopName: this.state.selectedShop,
       reviewer: this.state.reviewer,
-      review_text: this.state.reviewbody
+      review_text: this.state.reviewbody,
+      // date: new Date("<YYYY-mm-dd>")
     })
       .then(this.getReviews())
       .then(
@@ -74,6 +76,10 @@ class Reviews extends Component {
   getReviews = () => {
     const shopName = this.state.selectedShop;
     API.getShopReviewsByName(shopName).then(res => {
+      // res.data.forEach(review => {
+      //   let newDate = Date.toString(review.date);
+      //   console.log(newDate);
+      // });
       this.setState({
         reviewResults: res.data
       });
@@ -85,7 +91,7 @@ class Reviews extends Component {
       <div className="App-header">
         <form className="form-group" name="reviewForm">
           <label className="CCSInput">
-            Choose a Coffee Shop:
+            Choose a Coffee Shop <br />
             <select
               className="CCSSelect"
               name="selectedShop"
@@ -101,7 +107,7 @@ class Reviews extends Component {
           </label>
           <br />
           <label className="Review">
-            Write your review here
+            Write your review here <br />
             <textarea
               className="ReviewTextArea"
               name="reviewbody"
@@ -111,8 +117,7 @@ class Reviews extends Component {
           </label>
           <br />
           <label className="YourNameLabel">
-            Your Name
-            <br />
+            Your Name <br />
             <input
               className="YourNameInput"
               type="text"
