@@ -22,9 +22,9 @@ export default function IntroInfo() {
         </Typography>
         <Typography
           component="p"
-          fontWeight={900}
-          fontSize={24}
-          color="grey[500]"
+          fontWeight={700}
+          fontSize={20}
+          color="primary"
         >
           Here in Atlanta, we pride ourselves on the diverse culture that the
           booming economy has created for its residents. No matter which area of
