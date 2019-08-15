@@ -4,7 +4,7 @@ const db = require("../models");
 const algoliasearch = require("algoliasearch");
 require("dotenv").config();
 
-const client = algoliasearch("V63NYRH7LN", "9380ecbed812963b73d661779906c9d2");
+const client = algoliasearch("V63NYRH7LN", "3861e9591508b24dd0e4525110196d37");
 const index = client.initIndex("coffeeshops");
 
 async function asyncForEach(array, callback) {
@@ -19,7 +19,7 @@ const coffeeShops = [
     name: "Urban Grind",
     address: "962 Marietta St NW, Atlanta, GA 30318",
     description:
-      "Hip coffeehouse with cafe menu & free WiFi holds film screenings, poetry slams & other arty events.",
+      "Hip <b>coffeehouse</b> with cafe menu & free WiFi holds film screenings, poetry slams & other arty events.",
     area: "West Atlanta",
     coffeeBrand: "Bratdorf Bronson"
   },

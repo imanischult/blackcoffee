@@ -1,0 +1,173 @@
+Script started on Wed Aug 14 23:57:07 2019
+[1m[7m%[27m[1m[0m                                                                                                          ]2;aischult@AIs-MacBook-Pro: ~/gtcbc/Projects/blackcoffee]1;..s/blackcoffee[0m[27m[24m[J[01;32m➜  [36mblackcoffee[00m [01;34mgit:([31minterweave[34m) [33m✗[00m [K[?1h=[?2004hscripts[1m/[0m[0m [?1l>[?2004l
+]2;scripts]1;scripts[1m[7m%[27m[1m[0m                                                                                                          ]2;aischult@AIs-MacBook-Pro: ~/gtcbc/Projects/blackcoffee/scripts]1;..offee/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31minterweave[34m) [33m✗[00m [K[?1h=[?2004hnnode seedsDB.js[1m [0m[0m [?1l>[?2004l
+]2;node seedsDB.js]1;nodeConnected to mongodb
+deleted existing coffee shops
+Shops have been created
+looping over 4  items.
+Clearing Index
+(node:40772) UnhandledPromiseRejectionWarning: AlgoliaSearchError: Method not allowed with this API key
+    at success (/Users/aischult/gtcbc/Projects/blackcoffee/node_modules/algoliasearch/src/AlgoliaSearchCore.js:377:32)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+(node:40772) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 2)
+(node:40772) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+^C
+[1m[7m%[27m[1m[0m                                                                                                          ]2;aischult@AIs-MacBook-Pro: ~/gtcbc/Projects/blackcoffee/scripts]1;..offee/scripts[0m[27m[24m[J[01;31m➜  [36mscripts[00m [01;34mgit:([31minterweave[34m) [33m✗[00m [K[?1h=[?2004hnode seedsDB.js[?1l>[?2004l
+]2;node seedsDB.js]1;nodeConnected to mongodb
+deleted existing coffee shops
+Shops have been created
+looping over 4  items.
+Clearing Index
+Adding coffeeshops
+[1m[7m%[27m[1m[0m                                                                                                          ]2;aischult@AIs-MacBook-Pro: ~/gtcbc/Projects/blackcoffee/scripts]1;..offee/scripts[0m[27m[24m[J[01;32m➜  [36mscripts[00m [01;34mgit:([31minterweave[34m) [33m✗[00m [K[?1h=[?2004h.../..[?1l>[?2004l
+]2;../..]1;../..[1m[7m%[27m[1m[0m                                                                                                          ]2;aischult@AIs-MacBook-Pro: ~/gtcbc/Projects]1;..tcbc/Projects[0m[27m[24m[J[01;32m➜  [36mProjects[00m [K[?1h=[?2004hbblackcoffee[1m/[0m[0m [?1l>[?2004l
+]2;blackcoffee]1;blackcoffee[1m[7m%[27m[1m[0m                                                                                                          ]2;aischult@AIs-MacBook-Pro: ~/gtcbc/Projects/blackcoffee]1;..s/blackcoffee[0m[27m[24m[J[01;32m➜  [36mblackcoffee[00m [01;34mgit:([31minterweave[34m) [33m✗[00m [K[?1h=[?2004hnnpm start[?1l>[?2004l
+]2;npm start]1;npm
+> blackcoffee@1.0.0 start /Users/aischult/gtcbc/Projects/blackcoffee
+> if-env NODE_ENV=production && npm run start:prod || npm run start:dev
+
+
+> blackcoffee@1.0.0 start:dev /Users/aischult/gtcbc/Projects/blackcoffee
+> concurrently "nodemon --ignore 'client/*'" "npm run client"
+
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m > blackcoffee@1.0.0 client /Users/aischult/gtcbc/Projects/blackcoffee
+[90m[2m[1][22m[39m > cd client && npm start
+[90m[2m[1][22m[39m 
+[90m[2m[0][22m[39m [33m[nodemon] 1.19.1[39m
+[90m[2m[0][22m[39m [33m[nodemon] to restart at any time, enter `rs`[39m
+[90m[2m[0][22m[39m [33m[nodemon] watching: *.*[39m
+[90m[2m[0][22m[39m [32m[nodemon] starting `node server.js`[39m
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m > blackcoffee@0.1.0 start /Users/aischult/gtcbc/Projects/blackcoffee/client
+[90m[2m[1][22m[39m > react-scripts start
+[90m[2m[1][22m[39m 
+[90m[2m[0][22m[39m events.js:174
+[90m[2m[0][22m[39m       throw er; // Unhandled 'error' event
+[90m[2m[0][22m[39m       ^
+[90m[2m[0][22m[39m 
+[90m[2m[0][22m[39m Error: listen EADDRINUSE: address already in use :::3001
+[90m[2m[0][22m[39m     at Server.setupListenHandle [as _listen2] (net.js:1270:14)
+[90m[2m[0][22m[39m     at listenInCluster (net.js:1318:12)
+[90m[2m[0][22m[39m     at Server.listen (net.js:1405:7)
+[90m[2m[0][22m[39m     at Function.listen (/Users/aischult/gtcbc/Projects/blackcoffee/node_modules/express/lib/application.js:618:24)
+[90m[2m[0][22m[39m     at Object.<anonymous> (/Users/aischult/gtcbc/Projects/blackcoffee/server.js:44:5)
+[90m[2m[0][22m[39m     at Module._compile (internal/modules/cjs/loader.js:701:30)
+[90m[2m[0][22m[39m     at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+[90m[2m[0][22m[39m     at Module.load (internal/modules/cjs/loader.js:600:32)
+[90m[2m[0][22m[39m     at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+[90m[2m[0][22m[39m     at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+[90m[2m[0][22m[39m     at Function.Module.runMain (internal/modules/cjs/loader.js:754:12)
+[90m[2m[0][22m[39m     at startup (internal/bootstrap/node.js:283:19)
+[90m[2m[0][22m[39m     at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+[90m[2m[0][22m[39m Emitted 'error' event at:
+[90m[2m[0][22m[39m     at emitErrorNT (net.js:1297:8)
+[90m[2m[0][22m[39m     at process._tickCallback (internal/process/next_tick.js:63:19)
+[90m[2m[0][22m[39m     at Function.Module.runMain (internal/modules/cjs/loader.js:757:11)
+[90m[2m[0][22m[39m     at startup (internal/bootstrap/node.js:283:19)
+[90m[2m[0][22m[39m     at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+[90m[2m[0][22m[39m [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[90m[2m[1][22m[39m [36mStarting the development server...[39m
+[90m[2m[1][22m[39m [36m[39m
+[90m[2m[1][22m[39m [32mCompiled successfully![39m
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m You can now view [1mblackcoffee[22m in the browser.
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m   [1mLocal:[22m            http://localhost:[1m3000[22m/
+[90m[2m[1][22m[39m   [1mOn Your Network:[22m  http://10.0.0.50:[1m3000[22m/
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Note that the development build is not optimized.
+[90m[2m[1][22m[39m To create a production build, use [36mnpm run build[39m.
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [32mCompiled successfully![39m
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [32mCompiled successfully![39m
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [32mCompiled successfully![39m
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [33mCompiled with warnings.[39m
+[90m[2m[1][22m[39m [33m[39m
+[90m[2m[1][22m[39m [7m./src/components/HomePage/HomePage.js[27m
+[90m[2m[1][22m[39m   [1mLine 4:[22m  'Markup' is defined but never used  [33m[4mno-unused-vars[24m[39m
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Search for the [4m[33mkeywords[39m[24m to learn more about each warning.
+[90m[2m[1][22m[39m To ignore, add [36m// eslint-disable-next-line[39m to the line before.
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [31mFailed to compile.[39m
+[90m[2m[1][22m[39m [31m[39m
+[90m[2m[1][22m[39m [7m./src/components/HomePage/HomePage.js[27m
+[90m[2m[1][22m[39m   [1mLine 80:[22m  Parsing error: Unexpected token, expected "jsxTagEnd"
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m [0m [90m 78 | [39m              [33m<[39m[33mbr[39m [33m/[39m[33m>[39m[0m
+[90m[2m[1][22m[39m [0m [90m 79 | [39m            [33m<[39m[33m/[39m[33mdiv[39m[0m
+[90m[2m[1][22m[39m [0m[31m[1m>[22m[39m[90m 80 | [39m            [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[90m[2m[1][22m[39m [0m [90m    | [39m            [31m[1m^[22m[39m[0m
+[90m[2m[1][22m[39m [0m [90m 81 | [39m          [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[90m[2m[1][22m[39m [0m [90m 82 | [39m        ))}[0m
+[90m[2m[1][22m[39m [0m [90m 83 | [39m      [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [31mFailed to compile.[39m
+[90m[2m[1][22m[39m [31m[39m
+[90m[2m[1][22m[39m [7m./src/components/HomePage/HomePage.js[27m
+[90m[2m[1][22m[39m   [1mLine 83:[22m  Parsing error: Unexpected token, expected ","
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m [0m [90m 81 | [39m        ))}[0m
+[90m[2m[1][22m[39m [0m [90m 82 | [39m      [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[90m[2m[1][22m[39m [0m[31m[1m>[22m[39m[90m 83 | [39m    )[33m;[39m[0m
+[90m[2m[1][22m[39m [0m [90m    | [39m     [31m[1m^[22m[39m[0m
+[90m[2m[1][22m[39m [0m [90m 84 | [39m  }[0m
+[90m[2m[1][22m[39m [0m [90m 85 | [39m}[0m
+[90m[2m[1][22m[39m [0m [90m 86 | [39m[36mexport[39m [36mdefault[39m [33mHomePage[39m[33m;[39m[0m
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [31mFailed to compile.[39m
+[90m[2m[1][22m[39m [31m[39m
+[90m[2m[1][22m[39m [7m./src/components/HomePage/HomePage.js[27m
+[90m[2m[1][22m[39m   [1mLine 83:[22m  Parsing error: Unexpected token, expected ","
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m [0m [90m 81 | [39m        ))}[0m
+[90m[2m[1][22m[39m [0m [90m 82 | [39m      [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[90m[2m[1][22m[39m [0m[31m[1m>[22m[39m[90m 83 | [39m    )[33m;[39m[0m
+[90m[2m[1][22m[39m [0m [90m    | [39m     [31m[1m^[22m[39m[0m
+[90m[2m[1][22m[39m [0m [90m 84 | [39m  }[0m
+[90m[2m[1][22m[39m [0m [90m 85 | [39m}[0m
+[90m[2m[1][22m[39m [0m [90m 86 | [39m[36mexport[39m [36mdefault[39m [33mHomePage[39m[33m;[39m[0m
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [33mCompiled with warnings.[39m
+[90m[2m[1][22m[39m [33m[39m
+[90m[2m[1][22m[39m [7m./src/components/HomePage/HomePage.js[27m
+[90m[2m[1][22m[39m   [1mLine 4:[22m  'Markup' is defined but never used  [33m[4mno-unused-vars[24m[39m
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Search for the [4m[33mkeywords[39m[24m to learn more about each warning.
+[90m[2m[1][22m[39m To ignore, add [36m// eslint-disable-next-line[39m to the line before.
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [33mCompiled with warnings.[39m
+[90m[2m[1][22m[39m [33m[39m
+[90m[2m[1][22m[39m [7m./src/components/HomePage/HomePage.js[27m
+[90m[2m[1][22m[39m   [1mLine 4:[22m  'Markup' is defined but never used  [33m[4mno-unused-vars[24m[39m
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Search for the [4m[33mkeywords[39m[24m to learn more about each warning.
+[90m[2m[1][22m[39m To ignore, add [36m// eslint-disable-next-line[39m to the line before.
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [33mCompiled with warnings.[39m
+[90m[2m[1][22m[39m [33m[39m
+[90m[2m[1][22m[39m [7m./src/components/HomePage/HomePage.js[27m
+[90m[2m[1][22m[39m   [1mLine 4:[22m  'Markup' is defined but never used  [33m[4mno-unused-vars[24m[39m
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Search for the [4m[33mkeywords[39m[24m to learn more about each warning.
+[90m[2m[1][22m[39m To ignore, add [36m// eslint-disable-next-line[39m to the line before.
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [33mCompiled with warnings.[39m
+[90m[2m[1][22m[39m [33m[39m
+[90m[2m[1][22m[39m [7m./src/components/HomePage/HomePage.js[27m
+[90m[2m[1][22m[39m   [1mLine 4:[22m  'Markup' is defined but never used  [33m[4mno-unused-vars[24m[39m
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Search for the [4m[33mkeywords[39m[24m to learn more about each warning.
+[90m[2m[1][22m[39m To ignore, add [36m// eslint-disable-next-line[39m to the line before.
+[90m[2m[1][22m[39m 
+[90m[2m[1][22m[39m Compiling...
+[90m[2m[1][22m[39m [32mCompiled successfully![39m
