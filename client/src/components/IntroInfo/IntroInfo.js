@@ -1,29 +1,44 @@
 import React from "react";
 import "./IntroInfo.css";
-// import logo from "./images/coffee-logo.svg";
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 
-function IntroInfo() {
+const useStyles = makeStyles(theme => ({
+  root: {
+    padding: theme.spacing(3, 2)
+    // eslint-disable-next-line no-undef
+  }
+}));
+
+export default function IntroInfo() {
+  const classes = useStyles();
+
   return (
-    <div id="intro" className="container">
-      <br />
-      {/* <h1 id="intro">
-        Welcome to BLACK <img src={logo} height="90" width="90" alt="Logo" />
-      </h1> */}
-      <p>
-        Here in Atlanta, we pride ourselves on the diverse culture that the
-        booming economy has created for its residents. No matter which area of
-        the ATL you happen to find yourself in, it is almost guaranteed that you
-        will find some hidden treasure that offers moderness, history, and a
-        taste of Atlanta culture that is unlike any other city.
-        <br />
-        <br />
-        BLACK aims to shed light on some of the hidden pockets of culture that
-        we may have otherwise missed. We begin with Atlanta's variety of black
-        owned coffee shops. Use the search tool below to find coffee shops by
-        name, location, or coffee type.
-      </p>
+    <div>
+      <Paper className={classes.root}>
+        <Typography variant="h5" component="h3">
+          Welcome to Coffee BLACK
+        </Typography>
+        <Typography
+          component="p"
+          fontWeight={700}
+          fontSize={20}
+          color="primary"
+        >
+          Here in Atlanta, we pride ourselves on the diverse culture that the
+          booming economy has created for its residents. No matter which area of
+          the ATL you happen to find yourself in, it is almost guaranteed that
+          you will find some hidden treasure that offers moderness, history, and
+          a taste of Atlanta culture that is unlike any other city.
+          <br />
+          <br />
+          BLACK aims to shed light on some of the hidden pockets of culture that
+          we may have otherwise missed. We begin with Atlanta's variety of black
+          owned coffee shops. Use the search tool below to find coffee shops by
+          name, location, or coffee type.
+        </Typography>
+      </Paper>
     </div>
   );
 }
-
-export default IntroInfo;

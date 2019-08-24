@@ -14,6 +14,7 @@ import "./Navbar.css";
 export default () => {
   return (
     <div className="navbar">
+      {" "}
       <Link className="text" to="/">
         Home{" "}
       </Link>
