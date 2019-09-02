@@ -6,6 +6,12 @@
   margin-bottom: 40px;
   width: 75%;
 }
+
+.MuiPaper-root {
+  background-color: #665033;
+  opacity: 0.98;
+}
+
 /* actual paper card */
 div.MuiPaper-root.MuiPaper-elevation1.makeStyles-root-1.MuiPaper-rounded {
   background-color: #665033;

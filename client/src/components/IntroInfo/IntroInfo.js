@@ -24,7 +24,7 @@ export default function IntroInfo() {
           component="p"
           fontWeight={700}
           fontSize={20}
-          color="primary"
+          
         >
           Here in Atlanta, we pride ourselves on the diverse culture that the
           booming economy has created for its residents. No matter which area of
