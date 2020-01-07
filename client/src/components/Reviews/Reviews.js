@@ -76,10 +76,10 @@ class Reviews extends Component {
   getReviews = () => {
     const shopName = this.state.selectedShop;
     API.getShopReviewsByName(shopName).then(res => {
-      // res.data.forEach(review => {
-      //   let newDate = Date.toString(review.date);
-      //   console.log(newDate);
-      // });
+      res.data.forEach(review => {
+      let newDate = review.date.split("T")[0];
+        review.date = newDate;
+      });
       this.setState({
         reviewResults: res.data
       });
