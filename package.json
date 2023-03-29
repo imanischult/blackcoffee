@@ -18,7 +18,7 @@
   "devDependencies": {
     "concurrently": "^7.6.0",
     "faker": "^4.1.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^2.0.22"
   },
   "dependencies": {
     "algoliasearch": "^3.33.0",
